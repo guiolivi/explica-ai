@@ -1,7 +1,7 @@
 :root {
     /* Fonts */
-    --title-font: "Arial";
-    --subtitle-font: "Arial";
+    --title-font: "Josefin Sans";
+    --subtitle-font: "Montserrat";
     --text-font: "Arial";
 
     /* Simples Theme */
@@ -27,6 +27,7 @@
 
 #page {
     display: grid;
+    background-color: var(--background-color_simples);
     width: 100vw;
     height: 100vh;
     padding: 0;
@@ -41,23 +42,98 @@
     flex-direction: column;
     align-items: center;
     justify-content: center;
-
-    outline: 1px solid var(--primary-color_simples);
 }
 
 #input-switch {
     display: flex;
     flex-direction: column;
     align-items: center;
-
-    outline: 1px solid var(--primary-color_simples);
 }
 
 #copyright {
     display: flex;
     justify-content: center;
+}
 
+/* Header */
+
+#logo {
+    height: 165px;
+    width: 165px;
+    margin-bottom: 38px;
+    margin-right: -5px;
+}
+
+#title {
+    display: flex;
+    align-items: center;
+    margin-right: 30px;
+    margin-top: 100px;
+    font-family: var(--title-font), sans-serif;
+    font-size: 5rem;
+    font-weight: 700;
+}
+
+#subtitle {
+    margin-top: -34px;
+    color: var(--secondary-color_simples);
+    font-family: var(--subtitle-font), sans-serif;
+    font-size: 1.1rem;
+    font-weight: 440;
+}
+
+/* Main - Input */
+
+#input {
+    display: flex;
+    align-items: center;
+    justify-content: flex-end;
+    height: 52px;
+    width: 100%;
+    max-width: 940px;
+    margin-bottom: 30px;
+    border-radius: 30px;
     outline: 1px solid var(--primary-color_simples);
+}
+
+#explicar-button {
+    padding: 8px 60px;
+    margin-right: 20px;
+    border-radius: 30px;
+    outline: 1px solid var(--primary-color_simples);
+}
+
+/* Main - Mode */
+
+#mode-switch {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    height: 38px;
+    width: 100%;
+    max-width: 255px;
+    border-radius: 30px;
+    outline: 1px solid var(--primary-color_simples);
+}
+
+.mode-text {
+    margin: 4px 12px 0 12px;
+    font-family: var(--title-font), sans-serif;
+    font-size: 1.25rem;
+    font-weight: 700;
+}
+
+#switch-input {
+    display: inline-block;
+    padding: 1px 28px;
+    border-radius: 30px;
+    outline: 1px solid var(--primary-color_simples);
+}
+
+#switch-input input {
+    opacity: 0;
+    width: 0;
+    height: 0;
 }
 
 /* Footer */
@@ -65,34 +141,19 @@
 #copyright-text {
     display: inline-block;
     align-self: flex-end;
+    margin-bottom: 18px;
+    font-family: var(--subtitle-font), sans-serif;
+    font-size: 13px;
 }
 
-/* Mess */
+/* Loading */
 
-#title {
-    display: flex;
-    align-items: center;
-    font-size: 50px;
-    font-weight: 700;
+#loading {
+    display: none;
 }
 
-#logo {
-    margin: 20px;
-}
+/* Output */
 
-#subtitle {
-    font-size: 15px;
-}
-
-#input {
-    height: 15%;
-    width: 70%;
-    margin: 30px;
-    outline: 1px solid var(--primary-color_simples);
-}
-
-#mode-switch {
-    height: 10%;
-    width: 30%;
-    outline: 1px solid var(--primary-color_simples);
+#return-output {
+    display: none;
 }

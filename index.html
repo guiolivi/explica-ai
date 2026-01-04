@@ -5,7 +5,9 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta name="description" content="Explica aí! - Quick definition web app.">
     <link rel="icon" type="image/x-icon" href="explica-ai.ico">
-    <link rel="stylesheet" href="style.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Google+Sans+Flex:opsz,wght@6..144,1..1000&family=Josefin+Sans:ital,wght@0,100..700;1,100..700&family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">    <link rel="stylesheet" href="style.css">
     <script type="module" src="script.js"></script>
     <title>Explica aí!</title>
 </head>
@@ -13,8 +15,8 @@
 
     <header id="title-subtitle">
         <div id="title">
-            <img src="https://picsum.photos/100" alt="" id="logo">
-            Explica aí!
+            <img src="media/explica-ai-simples.png" alt="" id="logo">
+            Explica&nbsp;<span style="color: var(--accent-color_simples)">aí!</span>
         </div>
 
         <div id="subtitle">
@@ -31,12 +33,12 @@
         </div>
 
         <div id="mode-switch">
-            <div class="mode-text"></div>
+            <div class="mode-text">Simples</div>
             <label id="switch-input">
-                <!--<input>-->
+                <input type="checkbox">
                 <span class="switch-input_circle"></span>
             </label>
-            <div class="mode-text"></div>
+            <div class="mode-text">Técnico</div>
         </div>
     </main>
 
