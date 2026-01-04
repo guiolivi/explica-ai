@@ -13,58 +13,61 @@
 </head>
 <body id="page">
 
-    <header id="title-subtitle">
-        <div id="title">
-            <img src="media/explica-ai-simples.png" alt="Logo Explica aí" id="logo">
-            Explica&nbsp;<span style="color: var(--accent-color_simples)">aí!</span>
-        </div>
+    <section id="input">
+        <header id="title-subtitle">
+            <div id="title">
+                <img src="media/explica-ai-simples.png" alt="Logo Explica aí" id="logo">
+                Explica&nbsp;<span style="color: var(--accent-color_simples)">aí!</span>
+            </div>
 
-        <div id="subtitle">
-            Digite algo para ser explanado, do seu jeito
-        </div>
-    </header>
+            <div id="subtitle">
+                Digite algo para ser explanado, do seu jeito
+            </div>
+        </header>
 
-    <main id="input-switch">
-        <label id="input">
-            <input type="text" placeholder="Inteligência Artificial, Inflação, Sofismo..." id="input-text">
-            <label id="explicar-button">
-                <button id="explicar-button_text">Explicar</button>
-                <img src="media/seta-direita.svg" alt="Seta virada para a direita" id="explicar-button_arrow">
+        <div id="input-switch">
+            <label id="switch">
+                <input type="text" placeholder="Inteligência Artificial, Inflação, Sofismo..." id="input-text">
+                <span id="explicar-button">
+                    <button id="explicar-button_text">Explicar</button>
+                    <img src="media/seta-direita.svg" alt="Seta virada para a direita" id="explicar-button_arrow">
+                </span>
             </label>
-        </label>
 
-        <div id="mode-switch">
-            <div class="mode-text simples">Simples</div>
-            <label id="switch-input">
-                <input type="checkbox">
-                <span id="switch-input_circle"></span>
-            </label>
-            <div class="mode-text tecnico">Técnico</div>
+            <div id="mode-switch">
+                <div class="mode-text simples">Simples</div>
+                <label id="switch-input">
+                    <input type="checkbox">
+                    <span id="switch-input_circle"></span>
+                </label>
+                <div class="mode-text tecnico">Técnico</div>
+            </div>
         </div>
-    </main>
-
-    <footer id="copyright">
-        <div id="copyright-text">Criado por Guilherme 💛</div>
-    </footer>
+    </section>
 
     <section id="loading">
-        <div id="loading-text"></div>
-        <img src="#" alt="" id="loading-logo">
+        <div id="loading-text">Rodando algoritmos de sabedoria…</div>
+        <img src="media/brain-loading.png" alt="Image of a brain fused with artificial intelligence" id="loading-logo">
     </section>
 
     <section id="return-output">
+        <div id="upper-output_text">Me <span style="color: var(--accent-color_simples)">explica</span> sobre...</div>
+
         <div id="explicar-button_return">
-            <img src="#" alt="" id="explicar-button_return__arrow">
-            <div id="explicar-button_return__text"></div>
+            <img src="media/seta-esquerda.png" alt="Seta virada para a esquerda" id="explicar-button_return__arrow">
+            <button id="explicar-button_return__text">Explicar outra coisa</button>
         </div>
 
-        <div id="upper-output_text"></div>
         <div id="output">
             <div id="output-title"></div>
             <div id="output-line"></div>
             <div id="output-response"></div>
         </div>
     </section>
+
+    <footer id="copyright">
+        <div id="copyright-text">Criado por Guilherme 💛</div>
+    </footer>
 
 </body>
 </html>

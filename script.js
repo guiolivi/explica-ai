@@ -25,3 +25,11 @@ async function getGroqChatCompletion() {
 
 main()
 getGroqChatCompletion().then(res => console.log(res));*/
+
+// const visibility = { input, loading, output }
+//
+// function setState(state) {
+//     Object.entries(visibility).forEach(([key, el]) => {
+//         el.classList.toggle("active", key === state)
+//     })
+// }
