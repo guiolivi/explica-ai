@@ -1,0 +1,59 @@
+:root {
+    /* Fonts */
+    --title-font: "Arial";
+    --subtitle-font: "Arial";
+    --text-font: "Arial";
+
+    /* Simples Theme */
+    --primary-color_simples: #1A1A1A;
+    --secondary-color_simples: #4A4A4A;
+    --tertiary-color_simples: #A8A8A8;
+    --accent-color_simples: #B0B0B0;
+
+    --background-color_simples: #F9F9F9;
+    --box-background-color_simples: #FFFFFF;
+    --box-outline-color_simples: #D5D5D5;
+
+    /* Técnico Theme */
+    --primary-color_tecnico: #E5E5E5;
+    --secondary-color_tecnico: #F4F4F4;
+    --tertiary-color_tecnico: #575757;
+    --accent-color_tecnico: #FFDC4A;
+
+    --background-color_tecnico: #111111;
+    --box-background-color_tecnico: #202020;
+    --box-outline-color_tecnico: #444444;
+}
+
+#page {
+    display: grid;
+    width: 100vw;
+    height: 100vh;
+    padding: 0;
+    margin: 0;
+    grid-template-rows: 2.5fr 2fr 1fr;
+}
+
+/* Header, Main, Footer (Separations) */
+
+#title-subtitle {
+    outline: 1px solid var(--primary-color_simples);
+}
+
+#input-switch {
+    outline: 1px solid var(--primary-color_simples);
+}
+
+#copyright {
+    display: flex;
+    align-items: baseline;
+    justify-content: center;
+    outline: 1px solid var(--primary-color_simples);
+}
+
+/* Footer */
+
+#copyright-text {
+    display: inline-block;
+    align-self: flex-end;
+}
