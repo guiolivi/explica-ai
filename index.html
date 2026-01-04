@@ -15,7 +15,7 @@
 
     <header id="title-subtitle">
         <div id="title">
-            <img src="media/explica-ai-simples.png" alt="" id="logo">
+            <img src="media/explica-ai-simples.png" alt="Logo Explica aí" id="logo">
             Explica&nbsp;<span style="color: var(--accent-color_simples)">aí!</span>
         </div>
 
@@ -25,25 +25,26 @@
     </header>
 
     <main id="input-switch">
-        <div id="input">
-            <div id="explicar-button">
-                <div id="explicar-button_text"></div>
-                <img src="#" alt="" id="explicar-button_arrow">
-            </div>
-        </div>
+        <label id="input">
+            <input type="text" placeholder="Inteligência Artificial, Inflação, Sofismo..." id="input-text">
+            <label id="explicar-button">
+                <button id="explicar-button_text">Explicar</button>
+                <img src="media/seta-direita.svg" alt="Seta virada para a direita" id="explicar-button_arrow">
+            </label>
+        </label>
 
         <div id="mode-switch">
-            <div class="mode-text">Simples</div>
+            <div class="mode-text simples">Simples</div>
             <label id="switch-input">
                 <input type="checkbox">
-                <span class="switch-input_circle"></span>
+                <span id="switch-input_circle"></span>
             </label>
-            <div class="mode-text">Técnico</div>
+            <div class="mode-text tecnico">Técnico</div>
         </div>
     </main>
 
     <footer id="copyright">
-        <div id="copyright-text">Criado por Guilherme com 💛</div>
+        <div id="copyright-text">Criado por Guilherme 💛</div>
     </footer>
 
     <section id="loading">
