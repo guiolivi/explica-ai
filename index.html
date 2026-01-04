@@ -6,10 +6,59 @@
     <meta name="description" content="Explica aí! - Quick definition web app.">
     <link rel="icon" type="image/x-icon" href="explica-ai.ico">
     <link rel="stylesheet" href="style.css">
-    <script src="script.js" async></script>
+    <script type="module" src="script.js"></script>
     <title>Explica aí!</title>
 </head>
 <body>
+
+    <header id="title-subtitle">
+        <div id="title">
+            <img src="#" alt="" id="logo">
+        </div>
+
+        <div id="subtitle">
+
+        </div>
+    </header>
+
+    <main id="input-switch">
+        <div id="input">
+            <div id="explicar-button">
+                <div id="explicar-button_text"></div>
+                <img src="#" alt="" id="explicar-button_arrow">
+            </div>
+        </div>
+
+        <div id="mode-switch">
+            <div class="mode-text"></div>
+            <label id="switch-input">
+                <!--<input>-->
+                <span class="switch-input_circle"></span>
+            </label>
+            <div class="mode-text"></div>
+        </div>
+    </main>
+
+    <footer id="copyright"></footer>
+
+    <section id="loading">
+        <div id="loading-text"></div>
+        <img src="#" alt="" id="loading-logo">
+    </section>
+
+    <section id="return-output">
+        <div id="explicar-button_return">
+            <img src="#" alt="" id="explicar-button_return__arrow">
+            <div id="explicar-button_return__text"></div>
+        </div>
+
+        <div id="upper-output_text"></div>
+        <div id="output">
+            <div id="output-title"></div>
+            <div id="output-line"></div>
+            <div id="output-response"></div>
+        </div>
+    </section>
 
 </body>
 </html>
