@@ -86,6 +86,49 @@ input[type="text"] {
     opacity: 0 !important;
 }
 
+.glow-bg{
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    width: 60vw;          /* motion area */
+    height: 10vh;
+    transform: translate(-50%,-50%);
+    z-index: -1;
+    pointer-events: none;
+    background:
+            radial-gradient(ellipse at 25% 50%, rgba(187,187,187,.95) 0 28%, transparent 60%),
+            radial-gradient(ellipse at 75% 50%, rgba(159,159,159,.85) 0 28%, transparent 60%),
+            radial-gradient(ellipse at 50% 50%, rgba(98,98,98,.75) 0 34%, transparent 65%);
+    filter:blur(85px);
+    mix-blend-mode: plus-darker;
+    will-change: background-position,transform;
+    animation:
+            slide 3.6s ease-in-out infinite alternate,
+            pulse 6.5s ease-in-out infinite;
+}
+
+@keyframes slide{
+    0%   { background-position: 0 50%, 100% 50%, 50% 40% }
+    100% { background-position:100% 50%, 0 50%, 50% 60% }
+}
+
+@keyframes pulse{
+    0%,100% { transform:translate(-50%,-50%) scale(1) }
+    50%     { transform:translate(-50%,-50%) scale(1.06) }
+}
+
+@keyframes blinkingImage {
+    0%   {
+        opacity: 0;
+    }
+    50%  {
+        opacity: 1;
+    }
+    100% {
+        opacity: 0;
+    }
+}
+
 /* Body, Main */
 
 #page {
@@ -118,33 +161,6 @@ input[type="text"] {
     display: flex;
     flex-direction: column;
     align-items: center;
-}
-
-.glow-bg {
-    position: fixed;
-    top: 50%;
-    left: 50%;
-    width: 120vw;        /* wider */
-    height: 15vh;        /* smaller height */
-    transform: translate(-50%, -50%);
-    z-index: -1;
-
-    background:
-            radial-gradient(ellipse at 30% 50%, #bbbbbb, transparent 45%),
-            radial-gradient(ellipse at 70% 50%, #9f9f9f, transparent 45%),
-            radial-gradient(ellipse at 50% 50%, #626262, transparent 50%);
-
-    filter: blur(90px);
-    animation: centerGlow 3s ease-in-out infinite alternate;
-}
-
-@keyframes moveGlow {
-    0% {
-        background-position: 0 0, 100% 100%, 50% 50%;
-    }
-    100% {
-        background-position: 100% 50%, 0 50%, 50% 0;
-    }
 }
 
 /* Header */
@@ -355,6 +371,7 @@ input[type="text"] {
     pointer-events: none;
     width: 120px;
     height: 120px;
+    animation: blinkingImage 2s ease infinite;
 }
 
 /* Output */

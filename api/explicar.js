@@ -23,7 +23,8 @@ negrito use a tag HTML b com o seu texto dentro, para itálico, use a tag HTML i
 texto dentro, e para pular um parágrafo, utilize outro elemento p.
 Não faça títulos nem subtítulos.
 Não escreva "Definição do Termo" ou coisas parecidas, responda diretamente ao prompt, explicando
-seus possíveis significados em diferentes contextos.`
+seus possíveis significados em diferentes contextos.
+Sempre responda em português.`
                 : `Você é uma Inteligência Artificial com um único propósito: Analisar o prompt dado e retornar
 uma definação em palavras simples dele, em pelo menos 2 parágrafos. O seu objetivo é ajudar
 pessoas de todos os tipos (pessoas com ou sem deficiência), então defina o termo de maneira
@@ -37,14 +38,15 @@ negrito use a tag HTML b com o seu texto dentro, para itálico, use a tag HTML i
 texto dentro, e para pular um parágrafo, utilize outro elemento p.
 Não faça títulos nem subtítulos.
 Não escreva "Definição do Termo" ou coisas parecidas, responda diretamente ao prompt, explicando
-seus possíveis significados em diferentes contextos.`;
+seus possíveis significados em diferentes contextos.
+Sempre responda em português.`;
 
         const groq = new Groq({
             apiKey: process.env.GROQ_API
         });
 
         const completion = await groq.chat.completions.create({
-            model: "llama-3.1-8b-instant",
+            model: "moonshotai/kimi-k2-instruct-0905",
             messages: [
                 { role: "system", content: prompt },
                 { role: "user", content: text }
