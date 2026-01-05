@@ -133,7 +133,7 @@ Não faça títulos nem subtítulos.
 Não escreva "Definição do Termo" ou coisas parecidas, responda diretamente ao prompt, explicando
 seus possíveis significados em diferentes contextos.`
 
-const groq = new Groq({ apiKey: process.env.GROQ_API });
+const groq = new Groq({ apiKey: groqAPIKey, dangerouslyAllowBrowser: true });
 
 async function main() {
     return groq.chat.completions.create({
