@@ -11,13 +11,14 @@
     <script type="module" src="script.js"></script>
     <title>Explica aí!</title>
 </head>
-<body id="page">
+<body id="page"> <div class="glow-bg"></div>
 
     <section id="input" class="section">
         <header id="title-subtitle">
             <div id="title">
-                <img src="media/explica-ai-simples.png" alt="Logo Explica aí" id="logo">
-                Explica&nbsp;<span style="color: var(--accent-color_simples)">aí!</span>
+                <img src="media/explica-ai-simples.png" alt="Logo Explica aí (Simples)" class="logo logo-active">
+                <img src="media/explica-ai-tecnico.png" alt="Logo Explica aí (Técnico)" class="logo logo-hidden">
+                Explica&nbsp;<span style="color: var(--accent-color)">aí!</span>
             </div>
 
             <div id="subtitle">
@@ -46,12 +47,12 @@
     </section>
 
     <section id="loading" class="section hidden" style="display: none">
-        <div id="loading-text">Rodando algoritmos de sabedoria…</div>
+        <div id="loading-text">Carregando...</div>
         <img src="media/brain-loading.png" alt="Image of a brain fused with artificial intelligence" id="loading-logo">
     </section>
 
     <section id="return-output" class="section hidden" style="display: none">
-        <div id="upper-output_text">Me <span style="color: var(--accent-color_simples)">explica</span> sobre...</div>
+        <div id="upper-output_text">Me <span style="color: var(--accent-color)">explica</span> sobre...</div>
 
         <button id="explicar-button_return">
             <img src="media/seta-esquerda.png" alt="Seta virada para a esquerda" id="explicar-button_return__arrow">
