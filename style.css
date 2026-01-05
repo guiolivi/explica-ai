@@ -94,7 +94,7 @@ input[type="text"] {
     position: fixed;
     top: 50%;
     left: 50%;
-    width: 60vw;          /* motion area */
+    width: 60vw;
     height: 10vh;
     transform: translate(-50%,-50%);
     z-index: -1;
@@ -122,15 +122,9 @@ input[type="text"] {
 }
 
 @keyframes blinkingImage {
-    0%   {
-        opacity: 0;
-    }
-    50%  {
-        opacity: 1;
-    }
-    100% {
-        opacity: 0;
-    }
+    0%   { opacity: 0; }
+    50%  { opacity: 1; }
+    100% { opacity: 0; }
 }
 
 /* Body, Main */
@@ -478,7 +472,9 @@ input[type="text"] {
     font-weight: 440;
 }
 
-/* Mobile phones (up to 480px) */
+/* Media Queries */
+
+/* Mobile phones */
 @media (max-width: 480px) {
     :root {
         --title-font-size: 2.6rem;
@@ -486,142 +482,31 @@ input[type="text"] {
         --input-font-size: 0.7rem;
         --button-font-size: 0.75rem;
     }
-
-    .logo {
-        height: 110px;
-        width: 110px;
-        margin-bottom: 18px;
-        margin-right: 0;
-    }
-
-    #title {
-        font-size: var(--title-font-size);
-        margin-top: 32px;
-        margin-right: 12px;
-    }
-
-    #subtitle {
-        font-size: var(--subtitle-font-size);
-        margin-top: -18px;
-    }
-
-    #input-area {
-        height: 44px;
-        max-width: calc(100% - 80px);
-        border-radius: 24px;
-        padding: 0 8px;
-    }
-
-    #input-text {
-        font-size: var(--input-font-size);
-        padding: 8px 2px;
-        margin-left: 6px;
-    }
-
-    #explicar-button {
-        padding: 4px 6px;
-        margin-right: 8px;
-    }
-
-    #explicar-button_text {
-        font-size: var(--button-font-size);
-    }
-
-    #explicar-button_arrow {
-        width: 10px;
-        height: 10px;
-    }
-
-    #mode-switch {
-        max-width: 200px;
-        height: 28px;
-    }
-
-    #switch-input {
-        width: 2.7em;
-        height: 1.1em;
-    }
-
-    #switch-input_circle {
-        height: 0.9em;
-        width: 1em;
-    }
-
-    #switch-input input:checked + #switch-input_circle {
-        left: calc(100% - 1em - 5px);
-    }
-
-    .mode-text {
-        font-size: 0.9rem;
-    }
-
-    #loading-text {
-        width: 70%;
-        font-size: 1.7rem;
-    }
-
-    #loading-logo {
-        width: 100px;
-        height: 100px;
-    }
-
-    #explicar-button_return {
-        grid-row: 3;
-        grid-column: 1;
-        justify-self: center;
-        align-self: start;
-        margin-top: 0;
-    }
-
-    #return-output {
-        grid-template-columns: 1fr;
-        grid-auto-rows: auto;
-        justify-items: center;
-        align-items: center;
-        gap: 20px;
-        padding-top: 10vw;
-        padding-bottom: 10vw;
-        width: 100%;
-        box-sizing: border-box;
-    }
-
-    #upper-output_text {
-        grid-row: 1;
-        grid-column: 1;
-        justify-self: center;
-        text-align: center;
-    }
-
-    #output {
-        grid-row: 2;
-        grid-column: 1;
-        justify-self: center;
-        align-self: center;
-        width: min(80%, 550px);
-        max-width: 760px;
-        height: 150vw;
-    }
-
-    #output-title {
-        font-size: 1.6rem;
-        margin-top: 20px;
-        grid-row: 1;
-    }
-
-    #output-response {
-        font-size: 1rem;
-        padding-left: 18px;
-        padding-right: 18px;
-    }
-
-    .glow-bg {
-        width: 100vw;
-        height: 8vh;
-        filter: blur(70px);
-    }
+    .logo { height: 110px; width: 110px; margin-bottom: 18px; margin-right: 0; }
+    #title { font-size: var(--title-font-size); margin-top: 32px; margin-right: 12px; }
+    #subtitle { font-size: var(--subtitle-font-size); margin-top: -18px; }
+    #input-area { height: 44px; max-width: calc(100% - 80px); border-radius: 24px; padding: 0 8px; }
+    #input-text { font-size: var(--input-font-size); padding: 8px 2px; margin-left: 6px; }
+    #explicar-button { padding: 4px 6px; margin-right: 8px; }
+    #explicar-button_text { font-size: var(--button-font-size); }
+    #explicar-button_arrow { width: 10px; height: 10px; }
+    #mode-switch { max-width: 200px; height: 28px; }
+    .mode-text { font-size: 0.9rem; }
+    #switch-input { width: 2.7em; height: 1.1em; }
+    #switch-input_circle { height: 0.9em; width: 1em; }
+    #switch-input input:checked + #switch-input_circle { left: calc(100% - 1em - 5px); }
+    #loading-text { width: 70%; font-size: 1.7rem; }
+    #loading-logo { width: 100px; height: 100px; }
+    #return-output { grid-template-columns: 1fr; grid-auto-rows: auto; justify-items: center; align-items: center; gap: 20px; padding-top: 10vw; padding-bottom: 10vw; width: 100%; box-sizing: border-box; }
+    #upper-output_text { grid-row: 1; grid-column: 1; justify-self: center; text-align: center; }
+    #output { grid-row: 2; grid-column: 1; justify-self: center; align-self: center; width: min(80%, 550px); max-width: 760px; height: 150vw; }
+    #output-title { font-size: 1.6rem; margin-top: 20px; }
+    #output-response { font-size: 1rem; padding-left: 18px; padding-right: 18px; }
+    #explicar-button_return { grid-row: 3; grid-column: 1; justify-self: center; align-self: start; margin-top: 0; }
+    .glow-bg { width: 100vw; height: 8vh; filter: blur(70px); }
 }
 
-/* Small tablets and large phones (481px - 768px) */
+/* Small tablets and large phones */
 @media (min-width: 481px) and (max-width: 768px) {
     :root {
         --title-font-size: 3.2rem;
@@ -629,141 +514,31 @@ input[type="text"] {
         --input-font-size: 1.15rem;
         --button-font-size: 1rem;
     }
-
-    .logo {
-        height: 120px;
-        width: 120px;
-        margin-bottom: 27px;
-    }
-
-    #title {
-        font-size: 3.1rem;
-        margin-top: 32px;
-        margin-right: 13px;
-    }
-
-    #subtitle {
-        font-size: var(--subtitle-font-size);
-        margin-top: -18px;
-    }
-
-    #input-area {
-        height: 44px;
-        max-width: calc(95% - 80px);
-        border-radius: 24px;
-        padding: 0 8px;
-    }
-
-    #input-text {
-        font-size: var(--input-font-size);
-        padding: 8px 2px;
-        margin-left: 6px;
-    }
-
-    #explicar-button {
-        gap: 10px;
-        padding: 4px 12px;
-        margin-right: 8px;
-    }
-
-    #explicar-button_text {
-        font-size: var(--button-font-size);
-    }
-
-    #explicar-button_arrow {
-        width: 12px;
-        height: 12px;
-    }
-
-    #mode-switch {
-        max-width: 220px;
-        height: 32px;
-    }
-
-    #switch-input {
-        width: 3.2em;
-        height: 1.4em;
-    }
-
-    #switch-input_circle {
-        height: 1em;
-        width: 1.1em;
-    }
-
-    #switch-input input:checked + #switch-input_circle {
-        left: calc(100% - 1.1em - 5px);
-    }
-
-    .mode-text {
-        font-size: 1rem;
-    }
-
-    #loading-text {
-        width: 80%;
-        font-size: 1.8rem;
-    }
-
-    #loading-logo {
-        width: 105px;
-        height: 105px;
-    }
-
-    #return-output {
-        grid-template-columns: 1fr;
-        grid-auto-rows: auto;
-        justify-items: center;
-        align-items: center;
-        gap: 20px;
-        padding-top: 16vw;
-        padding-bottom: 16vw;
-        width: 100%;
-        box-sizing: border-box;
-    }
-
-    #explicar-button_return {
-        grid-row: 3;
-        grid-column: 1;
-        justify-self: center;
-        align-self: start;
-        margin-top: 0;
-    }
-
-    #upper-output_text {
-        grid-row: 1;
-        grid-column: 1;
-        justify-self: center;
-        text-align: center;
-    }
-
-    #output {
-        grid-row: 2;
-        grid-column: 1;
-        justify-self: center;
-        align-self: center;
-        width: min(80%, 550px);
-        max-width: 740px;
-        height: 100vw;
-    }
-
-    #output-title {
-        font-size: 1.6rem;
-        margin-top: 20px;
-        grid-row: 1;
-    }
-
-    #output-response {
-        font-size: 1rem;
-        padding-left: 18px;
-        padding-right: 18px;
-    }
-
-    .glow-bg {
-        width: 90vw;
-        height: 9vh;
-    }
+    .logo { height: 120px; width: 120px; margin-bottom: 27px; }
+    #title { font-size: 3.1rem; margin-top: 32px; margin-right: 13px; }
+    #subtitle { font-size: var(--subtitle-font-size); margin-top: -18px; }
+    #input-area { height: 44px; max-width: calc(95% - 80px); border-radius: 24px; padding: 0 8px; }
+    #input-text { font-size: var(--input-font-size); padding: 8px 2px; margin-left: 6px; }
+    #explicar-button { gap: 10px; padding: 4px 12px; margin-right: 8px; }
+    #explicar-button_text { font-size: var(--button-font-size); }
+    #explicar-button_arrow { width: 12px; height: 12px; }
+    #mode-switch { max-width: 220px; height: 32px; }
+    .mode-text { font-size: 1rem; }
+    #switch-input { width: 3.2em; height: 1.4em; }
+    #switch-input_circle { height: 1em; width: 1.1em; }
+    #switch-input input:checked + #switch-input_circle { left: calc(100% - 1.1em - 5px); }
+    #loading-text { width: 80%; font-size: 1.8rem; }
+    #loading-logo { width: 105px; height: 105px; }
+    #return-output { grid-template-columns: 1fr; grid-auto-rows: auto; justify-items: center; align-items: center; gap: 20px; padding-top: 16vw; padding-bottom: 16vw; width: 100%; box-sizing: border-box; }
+    #upper-output_text { grid-row: 1; grid-column: 1; justify-self: center; text-align: center; }
+    #output { grid-row: 2; grid-column: 1; justify-self: center; align-self: center; width: min(80%, 550px); max-width: 740px; height: 100vw; }
+    #output-title { font-size: 1.6rem; margin-top: 20px; }
+    #output-response { font-size: 1rem; padding-left: 18px; padding-right: 18px; }
+    #explicar-button_return { grid-row: 3; grid-column: 1; justify-self: center; align-self: start; margin-top: 0; }
+    .glow-bg { width: 90vw; height: 9vh; }
 }
 
-/* Tablets / small laptops (769px - 1024px) */
+/* Tablets */
 @media (min-width: 769px) and (max-width: 1024px) {
     :root {
         --title-font-size: 4.0rem;
@@ -771,211 +546,45 @@ input[type="text"] {
         --input-font-size: 1.2rem;
         --button-font-size: 1.05rem;
     }
-
-    .logo {
-        height: 130px;
-        width: 130px;
-        margin-bottom: 27px;
-    }
-
-    #title {
-        font-size: 3.4rem;
-        margin-top: 32px;
-        margin-right: 12px;
-    }
-
-    #subtitle {
-        font-size: var(--subtitle-font-size);
-        margin-top: -18px;
-    }
-
-    #input-area {
-        height: 44px;
-        max-width: calc(95% - 80px);
-        border-radius: 24px;
-        padding: 0 8px;
-    }
-
-    #input-text {
-        font-size: var(--input-font-size);
-        padding: 8px 2px;
-        margin-left: 6px;
-    }
-
-    #explicar-button {
-        gap: 10px;
-        padding: 4px 12px;
-        margin-right: 8px;
-    }
-
-    #explicar-button_text {
-        font-size: var(--button-font-size);
-    }
-
-    #explicar-button_arrow {
-        width: 12px;
-        height: 12px;
-    }
-
-    #mode-switch {
-        max-width: 220px;
-        height: 32px;
-    }
-
-    #switch-input {
-        width: 3.2em;
-        height: 1.4em;
-    }
-
-    #switch-input_circle {
-        height: 1em;
-        width: 1.1em;
-    }
-
-    #switch-input input:checked + #switch-input_circle {
-        left: calc(100% - 1.1em - 5px);
-    }
-
-    .mode-text {
-        font-size: 1rem;
-    }
-
-    #loading-text {
-        width: 80%;
-        font-size: 1.8rem;
-    }
-
-    #loading-logo {
-        width: 105px;
-        height: 105px;
-    }
-
-    #return-output {
-        grid-template-columns: 1fr;
-        grid-auto-rows: auto;
-        justify-items: center;
-        align-items: center;
-        gap: 20px;
-        padding-top: 12vw;
-        padding-bottom: 12vw;
-        width: 100%;
-        box-sizing: border-box;
-    }
-
-    #explicar-button_return {
-        grid-row: 3;
-        grid-column: 1;
-        justify-self: center;
-        align-self: start;
-        margin-top: 0;
-    }
-
-    #upper-output_text {
-        grid-row: 1;
-        grid-column: 1;
-        justify-self: center;
-        text-align: center;
-        font-size: 1.8em;
-    }
-
-    #output {
-        grid-row: 2;
-        grid-column: 1;
-        justify-self: center;
-        align-self: center;
-        width: min(90%, 600px);
-        max-width: 740px;
-        height: 92.5vw;
-    }
-
-    #output-title {
-        font-size: 1.6rem;
-        margin-top: 20px;
-        grid-row: 1;
-    }
-
-    #output-response {
-        font-size: 1rem;
-        padding-left: 18px;
-        padding-right: 18px;
-    }
-
-    .glow-bg {
-        width: 90vw;
-        height: 9vh;
-    }
+    .logo { height: 130px; width: 130px; margin-bottom: 27px; }
+    #title { font-size: 3.4rem; margin-top: 32px; margin-right: 12px; }
+    #subtitle { font-size: var(--subtitle-font-size); margin-top: -18px; }
+    #input-area { height: 44px; max-width: calc(95% - 80px); border-radius: 24px; padding: 0 8px; }
+    #input-text { font-size: var(--input-font-size); padding: 8px 2px; margin-left: 6px; }
+    #explicar-button { gap: 10px; padding: 4px 12px; margin-right: 8px; }
+    #explicar-button_text { font-size: var(--button-font-size); }
+    #explicar-button_arrow { width: 12px; height: 12px; }
+    #mode-switch { max-width: 220px; height: 32px; }
+    .mode-text { font-size: 1rem; }
+    #switch-input { width: 3.2em; height: 1.4em; }
+    #switch-input_circle { height: 1em; width: 1.1em; }
+    #switch-input input:checked + #switch-input_circle { left: calc(100% - 1.1em - 5px); }
+    #loading-text { width: 80%; font-size: 1.8rem; }
+    #loading-logo { width: 105px; height: 105px; }
+    #return-output { grid-template-columns: 1fr; grid-auto-rows: auto; justify-items: center; align-items: center; gap: 20px; padding-top: 12vw; padding-bottom: 12vw; width: 100%; box-sizing: border-box; }
+    #upper-output_text { grid-row: 1; grid-column: 1; justify-self: center; text-align: center; font-size: 1.8em; }
+    #output { grid-row: 2; grid-column: 1; justify-self: center; align-self: center; width: min(90%, 600px); max-width: 740px; height: 92.5vw; }
+    #output-title { font-size: 1.6rem; margin-top: 20px; }
+    #output-response { font-size: 1rem; padding-left: 18px; padding-right: 18px; }
+    #explicar-button_return { grid-row: 3; grid-column: 1; justify-self: center; align-self: start; margin-top: 0; }
+    .glow-bg { width: 90vw; height: 9vh; }
 }
 
-/* Desktops (1025px - 1399px) — default mostly handles this, but tweak */
+/* Desktops */
 @media (min-width: 1025px) and (max-width: 1399px) {
     :root {
         --title-font-size: 5.2rem;
         --subtitle-font-size: 1.1rem;
     }
-
     .logo { height: 165px; width: 165px; }
-
     #title { font-size: var(--title-font-size); margin-top: 92px; }
-
-    #loading-text {
-        width: 90%;
-        font-size: 1.95rem;
-    }
-
-    #loading-logo {
-        width: 115px;
-        height: 115px;
-    }
-
-    #return-output {
-        grid-template-columns: 1fr;
-        grid-auto-rows: auto;
-        justify-items: center;
-        align-items: center;
-        gap: 20px;
-        padding-top: 15vw;
-        padding-bottom: 15vw;
-        width: 100%;
-        box-sizing: border-box;
-    }
-
-    #explicar-button_return {
-        grid-row: 3;
-        grid-column: 1;
-        justify-self: center;
-        align-self: start;
-        margin-top: 0;
-    }
-
-    #upper-output_text {
-        grid-row: 1;
-        grid-column: 1;
-        justify-self: center;
-        text-align: center;
-        font-size: 2.1em;
-    }
-
-    #output {
-        grid-row: 2;
-        grid-column: 1;
-        justify-self: center;
-        align-self: center;
-        width: min(100%, 700px);
-        max-width: 740px;
-        height: 85vw;
-    }
-
-    #output-title {
-        font-size: 1.6rem;
-        margin-top: 20px;
-        grid-row: 1;
-    }
-
-    #output-response {
-        font-size: 1rem;
-        padding-left: 18px;
-        padding-right: 18px;
-    }
-
+    #loading-text { width: 90%; font-size: 1.95rem; }
+    #loading-logo { width: 115px; height: 115px; }
+    #return-output { grid-template-columns: 1fr; grid-auto-rows: auto; justify-items: center; align-items: center; gap: 20px; padding-top: 15vw; padding-bottom: 15vw; width: 100%; box-sizing: border-box; }
+    #upper-output_text { grid-row: 1; grid-column: 1; justify-self: center; text-align: center; font-size: 2.1em; }
+    #output { grid-row: 2; grid-column: 1; justify-self: center; align-self: center; width: min(100%, 700px); max-width: 740px; height: 85vw; }
+    #output-title { font-size: 1.6rem; margin-top: 20px; }
+    #output-response { font-size: 1rem; padding-left: 18px; padding-right: 18px; }
+    #explicar-button_return { grid-row: 3; grid-column: 1; justify-self: center; align-self: start; margin-top: 0; }
     .glow-bg { width: 85vw; height: 9vh; }
 }
