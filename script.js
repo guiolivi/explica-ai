@@ -42,7 +42,6 @@ switchButton.addEventListener("change", () => {
     document.documentElement.style.setProperty('--background-color', `var(${darkMode ? '--background-color_tecnico' : '--background-color_simples'})`)
     document.documentElement.style.setProperty('--box-background-color', `var(${darkMode ? '--box-background-color_tecnico' : '--box-background-color_simples'})`)
     document.documentElement.style.setProperty('--box-outline-color', `var(${darkMode ? '--box-outline-color_tecnico' : '--box-outline-color_simples'})`)
-    document.querySelector("")
 })
 
 const explicarButton = document.querySelector("#explicar-button");
