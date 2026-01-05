@@ -46,7 +46,7 @@ Sempre responda em português.`;
         });
 
         const completion = await groq.chat.completions.create({
-            model: "moonshotai/kimi-k2-instruct-0905",
+            model: "openai/gpt-oss-120b",
             messages: [
                 { role: "system", content: prompt },
                 { role: "user", content: text }
