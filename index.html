@@ -13,7 +13,7 @@
 </head>
 <body id="page">
 
-    <section id="input">
+    <section id="input" class="section">
         <header id="title-subtitle">
             <div id="title">
                 <img src="media/explica-ai-simples.png" alt="Logo Explica aí" id="logo">
@@ -27,41 +27,41 @@
 
         <div id="input-switch">
             <label id="switch">
-                <input type="text" placeholder="Inteligência Artificial, Inflação, Sofismo..." id="input-text">
-                <span id="explicar-button">
-                    <button id="explicar-button_text">Explicar</button>
+                <input type="text" placeholder="Inteligência Artificial, Inflação, Sofismo..." onkeydown = "if (event.keyCode === 13) document.getElementById('explicar-button').click()" id="input-text">
+                <button id="explicar-button">
+                    <span id="explicar-button_text">Explicar</span>
                     <img src="media/seta-direita.svg" alt="Seta virada para a direita" id="explicar-button_arrow">
-                </span>
+                </button>
             </label>
 
             <div id="mode-switch">
-                <div class="mode-text simples">Simples</div>
+                <div id="simples" class="mode-text">Simples</div>
                 <label id="switch-input">
-                    <input type="checkbox">
+                    <input type="checkbox" id="input-checkbox">
                     <span id="switch-input_circle"></span>
                 </label>
-                <div class="mode-text tecnico">Técnico</div>
+                <div id="tecnico" class="mode-text">Técnico</div>
             </div>
         </div>
     </section>
 
-    <section id="loading">
+    <section id="loading" class="section hidden" style="display: none">
         <div id="loading-text">Rodando algoritmos de sabedoria…</div>
         <img src="media/brain-loading.png" alt="Image of a brain fused with artificial intelligence" id="loading-logo">
     </section>
 
-    <section id="return-output">
+    <section id="return-output" class="section hidden" style="display: none">
         <div id="upper-output_text">Me <span style="color: var(--accent-color_simples)">explica</span> sobre...</div>
 
-        <div id="explicar-button_return">
+        <button id="explicar-button_return">
             <img src="media/seta-esquerda.png" alt="Seta virada para a esquerda" id="explicar-button_return__arrow">
-            <button id="explicar-button_return__text">Explicar outra coisa</button>
-        </div>
+            <span id="explicar-button_return__text">Explicar outra coisa</span>
+        </button>
 
         <div id="output">
-            <div id="output-title">Lorem ipsum</div>
+            <div id="output-title"></div>
             <hr id="output-line">
-            <div id="output-response">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Cumque debitis delectus doloremque ducimus inventore ipsa odio quibusdam, quos reprehenderit rerum unde ut velit vitae voluptatem voluptatibus. Ab aliquam aliquid architecto cum cupiditate deserunt ea facere laborum, necessitatibus omnis, praesentium quis unde voluptatum! Alias aliquam commodi dolores ex facilis hic iste iusto magnam minus pariatur, quia quos repellat saepe sapiente tempora. Ad aperiam cumque delectus facilis fuga, hic ipsum odio reiciendis rerum sequi sint totam ut? Accusantium alias, blanditiis consequuntur earum, esse, maiores nisi obcaecati quae quis ratione soluta voluptatem voluptatibus. Amet blanditiis culpa eligendi fugit labore maiores, neque pariatur quisquam repudiandae? Dignissimos dolor eveniet itaque nemo officia? Accusantium aliquam, amet deserunt, dicta dolores error esse est et eum ex incidunt ipsam magnam maiores minima molestiae natus numquam perferendis provident quidem recusandae soluta, sunt temporibus vel. At atque explicabo inventore ipsam natus voluptatem? Adipisci autem, delectus deleniti eaque eveniet facere id incidunt possimus reprehenderit? Quasi, totam, ut! Accusantium delectus nesciunt nobis repellendus. Harum incidunt labore perspiciatis quasi reiciendis. Aut quia quos rerum voluptas! Eius, est in maiores nisi obcaecati odio perferendis quae quibusdam! Ad aliquam, animi commodi doloribus, et excepturi expedita laborum modi mollitia nam nulla odio quo ut velit voluptatem?</div>
+            <div id="output-response"></div>
         </div>
     </section>
 
